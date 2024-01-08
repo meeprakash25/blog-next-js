@@ -11,15 +11,15 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  siteName: "Explorer",
+  siteName: "CChart",
   description:
-    "A minimal and lovely travel blog which shares experiences and citiest around the world!",
+    "The current chart highlights music creativity and various artists, centering on their talent and unique expressions through their music.",
   socialLinks: {
-    twitter: "https://twitter.com/kosovoweb",
-    youtube: "https://youtube.com/kosovoweb",
-    github: "https://github.com/kosovoweb",
-    linkedin: "https://linkedin.com/in/kosovoweb",
-    instagram: "https://instagram.com/kosovoweb",
+    twitter: "",
+    youtube: "https://www.youtube.com/channel/UCD0DjJgWAGXxALVlkbCzqtg",
+    github: "",
+    linkedin: "",
+    instagram: "https://instagram.com/CURRENTCHART",
   },
 };
 

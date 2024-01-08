@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
       },
       {
+        hostname: "localhost",
+        protocol: "http",
+      },
+      {
         hostname: "admin.currentchart.online",
         protocol: "https",
       },

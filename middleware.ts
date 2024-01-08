@@ -44,9 +44,9 @@ export const config = {
    * - api (API routes)
    * - _next/static (static files)
    * - _next/image (image optimization files)
-   * - favicon.ico (favicon file)
+   * - favicon.png (favicon file)
    */
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|opengraph-image|robots.txt|sitemap).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|opengraph-image.jpg|cchart_logo.png|robots.txt|sitemap).*)",
   ],
 };

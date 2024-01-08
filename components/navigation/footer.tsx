@@ -3,6 +3,7 @@ import { getDictionary } from "@/lib/getDictionary";
 import Link from "next/link";
 import SocialLink from "../elements/social-link";
 import PaddingContainer from "../layout/padding-container";
+import Image from "next/image";
 
 const Footer = async ({ locale }: { locale: string }) => {
   const dictionary = await getDictionary(locale);
@@ -10,7 +11,14 @@ const Footer = async ({ locale }: { locale: string }) => {
     <div className="py-8 mt-10 border-t">
       <PaddingContainer>
         <div>
-          <h2 className="text-3xl font-bold">{siteConfig.siteName}</h2>
+          <Link href={`/`}>
+            <Image
+              src={`${process.env.NEXT_PUBLIC_API_URL}assets/9b2a5c10-b17c-4ef1-a1e0-257cff23c34e`}
+              alt="logo"
+              width="70"
+              height="30"
+            />
+          </Link>
           <p className="max-w-md mt-2 text-lg text-neutral-700">
             {dictionary.footer.description}
           </p>
@@ -18,27 +26,15 @@ const Footer = async ({ locale }: { locale: string }) => {
         {/* Social and Currently At */}
         <div className="flex flex-wrap justify-between gap-4 mt-6">
           <div>
-            <div className="text-lg font-medium">#exploretheworld</div>
+            <div className="text-lg font-medium">#explorecurrentchart</div>
             <div className="flex items-center gap-3 mt-2 text-neutral-600">
-              <SocialLink
-                platform="twitter"
-                link={siteConfig.socialLinks.twitter}
-              />
               <SocialLink
                 platform="instagram"
                 link={siteConfig.socialLinks.instagram}
               />
               <SocialLink
-                platform="github"
-                link={siteConfig.socialLinks.github}
-              />
-              <SocialLink
                 platform="youtube"
                 link={siteConfig.socialLinks.youtube}
-              />
-              <SocialLink
-                platform="linkedin"
-                link={siteConfig.socialLinks.linkedin}
               />
             </div>
           </div>
@@ -59,11 +55,8 @@ const Footer = async ({ locale }: { locale: string }) => {
           </div>
           <div className="text-sm">
             {dictionary.footer.creatorText}{" "}
-            <Link
-              className="underline underline-offset-4"
-              href="https://kosovoweb.com"
-            >
-              KosovoWeb
+            <Link className="underline underline-offset-4" href="#">
+              GGW
             </Link>
           </div>
         </div>

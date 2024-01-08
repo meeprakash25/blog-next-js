@@ -77,12 +77,7 @@ export default async function Home({
         {/* <PostCard locale={locale} reverse post={posts[3]} /> */}
         <PostList
           locale={locale}
-          posts={posts.filter((_post, index) => index >= 3 && index < 6)}
-        />
-        <CTACard dictionary={dictionary} />
-        <PostList
-          locale={locale}
-          posts={posts.filter((_post, index) => index >= 6)}
+          posts={posts.filter((_post, index) => index >= 3)}
         />
       </main>
     </PaddingContainer>

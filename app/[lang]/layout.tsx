@@ -8,13 +8,6 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-/* STATIC METADATA */
-/* export const metadata: Metadata = {
-  title: "Explorer",
-  description:
-    "A minimal and lovely travel blog which shares experiences and citiest around the world!",
-}; */
-
 export const generateMetadata = async ({
   params: { lang },
 }: {
@@ -36,9 +29,9 @@ export const generateMetadata = async ({
       siteName: siteConfig.siteName,
       images: [
         {
-          url: "https://localhost:3000/opengraph-image.png",
-          width: 1200,
-          height: 628,
+          url: "https://localhost:3000/cchart_logo.png",
+          width: "auto",
+          height: "auto",
         },
       ],
       locale: lang,
@@ -47,12 +40,12 @@ export const generateMetadata = async ({
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_SITE_URL}`,
       languages: {
-        "en-US": `${process.env.NEXT_PUBLIC_SITE_URL}/en`,
+        "en-US": `${process.env.NEXT_PUBLIC_SITE_URL}en`,
       },
     },
     /* Verification for Google Search Console */
     verification: {
-      google: "phZgjAmXFUPB7WEa-ETZ3HfDj9tAifMO1VRJd7ybIQo",
+      google: "",
     },
   };
 };
@@ -69,14 +62,12 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       {/* Google Analytics Script */}
-      {/* <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-11Y5YESB1F"
-      ></Script> */}
-      {/* <Script id="google-analytics">{`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-11Y5YESB1F');`}</Script> */}
+      <Script
+        id="aclib"
+        type="text/javascript"
+        src="//acscdn.com/script/aclib.js"
+      ></Script>
+
       <body className={inter.className}>
         {/* @ts-expect-error Async Server Component */}
         <Navigation locale={lang} />
