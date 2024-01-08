@@ -18,6 +18,11 @@ export default async function Home({
   const getAllPosts = async () => {
     try {
       const posts = await directus.items("post").readByQuery({
+        filter: {
+          status: {
+            _eq: "published",
+          },
+        },
         fields: [
           "*",
           // "author.id",
