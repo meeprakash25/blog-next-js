@@ -67,8 +67,7 @@ export default function RootLayout({
           type="text/javascript"
           src="//acscdn.com/script/aclib.js"
           async
-        >
-        </script>
+        ></script>
       </head>
 
       <body className={inter.className}>

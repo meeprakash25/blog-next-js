@@ -55,7 +55,11 @@ const Footer = async ({ locale }: { locale: string }) => {
           </div>
           <div className="text-sm">
             {dictionary.footer.creatorText}{" "}
-            <Link className="underline underline-offset-4" href="#">
+            <Link
+              className="underline underline-offset-4"
+              href="https://getgoodweb.com/"
+              target="_blank"
+            >
               GGW
             </Link>
           </div>

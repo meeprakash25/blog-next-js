@@ -14,4 +14,10 @@
   .rich-text p {
     @apply mb-3 leading-snug text-neutral-700;
   }
+
+  .rich-text figure,
+  .rich-text image,
+  .rich-text img {
+    @apply !w-full;
+  }
 }
