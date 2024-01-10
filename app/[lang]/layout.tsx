@@ -61,12 +61,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang={lang}>
-      {/* Google Analytics Script */}
-      <Script
-        id="aclib"
-        type="text/javascript"
-        src="//acscdn.com/script/aclib.js"
-      ></Script>
+      <head>
+        <script
+          id="aclib"
+          type="text/javascript"
+          src="//acscdn.com/script/aclib.js"
+        >
+        </script>
+      </head>
 
       <body className={inter.className}>
         {/* @ts-expect-error Async Server Component */}
@@ -74,6 +76,14 @@ export default function RootLayout({
         <div className="pt-10 min-h-[calc(100vh-300px)]">{children}</div>
         {/* @ts-expect-error Async Server Component */}
         <Footer locale={lang} />
+
+        <Script type="text/javascript" defer>
+          {`
+            aclib.runAutoTag({
+                zoneId: '7odqzqlzej',
+            });
+          `}
+        </Script>
       </body>
     </html>
   );

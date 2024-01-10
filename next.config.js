@@ -14,6 +14,10 @@ const nextConfig = {
         hostname: "admin.currentchart.online",
         protocol: "https",
       },
+      {
+        hostname: "acscdn.com",
+        protocol: "https",
+      },
     ],
   },
   /*  experimental: {

@@ -23,16 +23,8 @@ export default async function Home({
             _eq: "published",
           },
         },
-        fields: [
-          "*",
-          // "author.id",
-          // "author.first_name",
-          // "author.last_name",
-          // "category.id",
-          // "category.title",
-          // "category.translations.*",
-          // "translations.*",
-        ],
+        fields: ["*"],
+        sort: "-date_created",
       });
 
       if (locale === "en") {
@@ -82,7 +74,7 @@ export default async function Home({
         {/* <PostCard locale={locale} reverse post={posts[3]} /> */}
         <PostList
           locale={locale}
-          posts={posts.filter((_post, index) => index >= 3)}
+          posts={posts.filter((_post, index) => index >= 3 && index < 7)}
         />
       </main>
     </PaddingContainer>

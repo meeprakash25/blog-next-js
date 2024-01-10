@@ -25,7 +25,7 @@ const Navigation = async () => {
                 <Link href={`/`}>Home</Link>
               </li>
               <li>
-                <a href="vote.currentchart.online" target="_blank">
+                <a href="https://vote.currentchart.online" target="_blank">
                   Vote
                 </a>
               </li>
