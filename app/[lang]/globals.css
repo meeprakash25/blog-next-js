@@ -20,4 +20,8 @@
   .rich-text img {
     @apply !w-full;
   }
+
+  /* .rich-text a {
+    @apply color-
+  } */
 }
