@@ -66,6 +66,7 @@ export default function RootLayout({
           id="aclib"
           type="text/javascript"
           src="//acscdn.com/script/aclib.js"
+          async
         >
         </script>
       </head>
@@ -77,7 +78,7 @@ export default function RootLayout({
         {/* @ts-expect-error Async Server Component */}
         <Footer locale={lang} />
 
-        <Script type="text/javascript" defer>
+        <Script id="asdf" type="text/javascript" defer>
           {`
             aclib.runAutoTag({
                 zoneId: '7odqzqlzej',

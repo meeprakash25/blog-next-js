@@ -5,7 +5,7 @@ import PostList from "@/components/post/post-lists";
 import directus from "@/lib/directus";
 import { getDictionary } from "@/lib/getDictionary";
 import { notFound } from "next/navigation";
-
+import { Sort } from "@directus/sdk";
 export default async function Home({
   params,
 }: {
@@ -24,7 +24,7 @@ export default async function Home({
           },
         },
         fields: ["*"],
-        sort: "-date_created",
+        sort: ["-date_created"] as Sort<unknown>,
       });
 
       if (locale === "en") {
